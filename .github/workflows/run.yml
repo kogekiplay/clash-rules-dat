@@ -170,9 +170,7 @@ jobs:
           curl -sSL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.list | ${{ env.SED }} > ./community/data/onedrive1
           sort ./community/data/onedrive1 | uniq -i > ./community/data/onedrive
           rm ./community/data/onedrive1
-          curl -sSL https://raw.githubusercontent.com/kogekiplay/clash_rules/main/Direct.list | ${{ env.SED }} > ./community/data/geolocation-cn1
-          sort ./community/data/geolocation-cn1 | uniq -i > ./community/data/geolocation-cn
-          rm ./community/data/geolocation-cn1
+          curl -sSL https://raw.githubusercontent.com/kogekiplay/clash_rules/main/Direct.list | ${{ env.SED }} > ./community/data/kogeki-cn
 
       - name: Build geosite.dat file
         run: |
