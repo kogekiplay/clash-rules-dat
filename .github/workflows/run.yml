@@ -171,6 +171,7 @@ jobs:
           sort ./community/data/onedrive1 | uniq -i > ./community/data/onedrive
           rm ./community/data/onedrive1
           curl -sSL https://raw.githubusercontent.com/kogekiplay/clash_rules/main/Direct.list | ${{ env.SED }} > ./community/data/kogeki-cn
+          curl -sSL https://raw.githubusercontent.com/kogekiplay/clash_rules/main/Proxy.list | ${{ env.SED }} > ./community/data/kogeki-!cn
 
       - name: Build geosite.dat file
         run: |
