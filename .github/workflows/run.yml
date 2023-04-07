@@ -21,7 +21,6 @@ jobs:
           echo "APPLE_DOMAINS_URL=https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/apple.china.conf" >> $GITHUB_ENV
           echo "CUSTOM_DIRECT=https://raw.githubusercontent.com/Loyalsoldier/domain-list-custom/release/cn.txt" >> $GITHUB_ENV
           echo "CUSTOM_PROXY=https://raw.githubusercontent.com/Loyalsoldier/domain-list-custom/release/geolocation-!cn.txt" >> $GITHUB_ENV
-          echo ""
         shell: bash
 
       - name: Checkout the "hidden" branch of this repo
@@ -172,6 +171,7 @@ jobs:
           rm ./community/data/onedrive1
           curl -sSL https://raw.githubusercontent.com/kogekiplay/clash_rules/main/Direct.list | ${{ env.SED }} > ./community/data/kogeki-cn
           curl -sSL https://raw.githubusercontent.com/kogekiplay/clash_rules/main/Proxy.list | ${{ env.SED }} > ./community/data/kogeki-!cn
+          curl -sSL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleDrive/GoogleDrive.list | ${{ env.SED }} > ./community/data/googledrive
 
       - name: Build geosite.dat file
         run: |

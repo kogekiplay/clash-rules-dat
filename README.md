@@ -26,5 +26,7 @@
   - 加入到 `geosite:greatfire` 类别中，可与上面的 `geosite:gfw` 类别同时使用，以达到域名黑名单的效果
   - 同时加入到 `geosite:geolocation-!cn` 类别中
 - **特别的**：
+  - 加入了分类：
+  - `geosite:googledrive`
   - `geosite:telegram` `geosite:discord` `geosite:bing` `geosite:youtube` `geosite:netflix` `geosite:bahamut` `geosite:onedrive` 合并了来自https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash 的域名
   `kogeki-cn` 加入了我需要直连的自有域名
