@@ -212,6 +212,7 @@ jobs:
 
       - name: Move and zip files
         run: |
+          mkdir -p ./publish/
           wget https://github.com/kogekiplay/geoip/releases/download/latest/Country.mmdb -O ./publish/country.mmdb
           install -Dp ./geoip.dat ./publish/geoip.dat
           install -Dp ./custom/publish/geosite.dat ./publish/geosite.dat
