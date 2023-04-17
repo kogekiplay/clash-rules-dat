@@ -215,6 +215,7 @@ jobs:
           curl -sSL https://raw.githubusercontent.com/kogekiplay/clash_rules/main/Direct.yaml | ${{ env.SED }} > ./data-lite/kogeki-cn
           curl -sSL https://raw.githubusercontent.com/kogekiplay/clash_rules/main/Proxy.yaml | ${{ env.SED }} > ./data-lite/kogeki-!cn
           curl -sSL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleDrive/GoogleDrive.yaml | ${{ env.SED }} > ./data-lite/googledrive
+          curl -sSL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy_Classical.yaml | ${{ env.SED }} > ./data-lite/proxy
           go run ./ --datapath=./data-lite --outputname geosite-lite.dat
 
       - name: Get geoip.dat relative files
